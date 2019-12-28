@@ -2,10 +2,10 @@ import React from "react";
 import { Card, CardMedia, CardContent, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 
-const PokeCard = ({ pokeName, classes }) => {
+const PokeCard = ({ pokeName, classes, image }) => {
   return (
     <Card className={classes.item}>
-      <CardMedia />
+      <CardMedia className={classes.media} image={image} />
       <CardContent>
         <Typography variant="h6" component="p">
           {pokeName}
@@ -20,8 +20,9 @@ export default withStyles({
         minWidth: "300px",
         margin: "1em",
         boxSizing: "border-box",
+        textAlign: "center"
     },
     media: {
-        minWidth: "200px",
+        minHeight: "250px",
     }
 })(PokeCard);
