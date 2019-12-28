@@ -1,8 +1,12 @@
 import React from "react";
 
 const Home = () => {
-  return ( 
-    <h1>Poke App</h1>
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Poke App</h1>
+      </header>
+    </div> 
    );
 }
  
