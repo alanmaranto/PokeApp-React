@@ -1,11 +1,11 @@
 import React from 'react';
-import HomeContainer from './containers/HomeContainer';
+import Home from './containers/Home';
 import './bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
-      <HomeContainer />
+      <Home />
     </div>
   );
 }
