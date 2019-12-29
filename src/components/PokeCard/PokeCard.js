@@ -14,7 +14,7 @@ const PokeCard = ({ pokeName, classes, image, to }) => {
       <CardMedia className={classes.media} image={image} />
       <CardContent>
         <Link to={to}>
-          <Typography variant="h6" component="p">
+          <Typography className={classes.name} variant="h6" component="p">
             {pokeName}
           </Typography>
         </Link>
@@ -28,9 +28,12 @@ export default withStyles({
     minWidth: "300px",
     margin: "2em",
     boxSizing: "border-box",
-    textAlign: "center"
+    textAlign: "center",
   },
   media: {
     minHeight: "300px"
+  },
+  name: {
+      color: "black"
   }
 })(PokeCard);

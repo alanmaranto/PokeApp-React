@@ -2,14 +2,13 @@ import React from "react";
 import PokeCard from "../PokeCard/PokeCard";
 import { Grid } from "@material-ui/core";
 
-const List = ({ pokeData }) => {
+const List = ({ pokeData, url }) => {
   return (
     <>
       <h1>Lista de pokemons</h1>
       <Grid container justify="center" spacing={2}>
         {pokeData.map((pokemon, index) => {
-          let url =
-            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
+
           let pokeIndex = pokemon.url.split("/")[
             pokemon.url.split("/").length - 2
           ];
