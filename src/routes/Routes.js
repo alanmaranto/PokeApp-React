@@ -11,7 +11,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/pokemons" component={PokeList} />
-        <Route exact path="/poke-info/:pokeIndex" component={PokeInfo} />
+        <Route exact path="/poke-info/:pokeIndex/" component={PokeInfo} />
       </Switch>
     </BrowserRouter>
   );

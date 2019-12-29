@@ -22,11 +22,13 @@ class PokeList extends Component {
   }
 
   render() {
+    const url =
+      "https://github.com/PokeApi/sprites/blob/master/sprites/pokemon/other-sprites/official-artwork/";
     const { pokeData } = this.state;
     return (
       <>
         <AppNav />
-        <List pokeData={pokeData} />
+        <List pokeData={pokeData} url={url} />
       </>
     );
   }
