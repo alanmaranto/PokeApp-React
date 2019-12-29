@@ -29,7 +29,7 @@ const List = ({ pokeData, url }) => {
           return (
             <PokeCard
               key={index}
-              to={`/poke-info/${pokeIndex}`}
+              to={`/poke-info/${pokeIndex}/${titleCasePokeName(pokemon.name)}`}
               pokeName={titleCasePokeName(pokemon.name)}
               image={`${url}${pokeIndex}.png?raw=true`}
             />

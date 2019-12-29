@@ -8,7 +8,7 @@ import {
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom'
 
-const PokeCard = ({ pokeName, classes, image, to }) => {
+const PokeCard = ({ pokeName, classes, image, to='' }) => {
   return (
     <Card className={classes.item}>
       <CardMedia className={classes.media} image={image} />
