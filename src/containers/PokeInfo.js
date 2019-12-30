@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import PokeDescription from "../components/PokeDescription/PokeDescription";
 
+import Axios from 'axios';
+
 class PokeInfo extends Component {
     componentDidMount(){
-
+      //peticion con axios
+      const { match } = this.props;
+      const descriptionId = match.params.pokeIndex;
+      const pokeDescriptionUrl = `${process.env.REACT_APP_POKE_API_BASE_URL}pokemon-species/${descriptionId}/`;
+      Axios.get(pokeDescriptionUrl)
+        .then(res => console.log(res.data.flavor_text_entries[11].flavor_text))
     }
 
   render() {
